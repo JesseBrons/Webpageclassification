@@ -20,12 +20,15 @@ bash create_index.sh
 bash crawl_websites.sh
 ```
 
-We will now truncate the files to the requested length and apply a first clean on the text. Run the truncate_data.sh for each category you wish to truncate and clean. Do not forget to change the output folders if necessary.
+We will now truncate the files to the requested length and apply a first clean on the text. Run the truncate_data.sh for each category you wish to truncate and clean. Do not forget to change the input/output folders if necessary.
 ```bash
 bash truncate_data.sh
 ```
 
-For our last step we will 
+For our last step we need to create a Hugging Face dataset structure. Changes to the Python script can be made to use a different train test split and to only retrieve a specific set of categories and/or features. Do not forget to change the input/output folders if necessary. 
+```bash
+bash create_dataset.sh
+```
 
 ## Run Experiments
 
