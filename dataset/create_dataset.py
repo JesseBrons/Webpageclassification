@@ -8,7 +8,7 @@ target_folder = sys.argv[1]
 data_folder = sys.argv[2]
 
 categories = ["Arts", "Business", "Computers", "Games", "Home", "Health", "News", "Recreation", "Reference", "Science", "Shopping", "Society", "Sports"] #Home
-features = ["category", "title", "body", "keywords"]
+features = ["category", "title", "body"]
 
 for idx, category in enumerate(categories):
     data_path = data_folder + "/" + category + "/*.txt"
