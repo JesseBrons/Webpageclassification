@@ -36,7 +36,15 @@ bash create_dataset.sh
 For our experiments we made use of Weights and Biases (WandB) to save and load models and to keep track of experiments. Check the Python scripts to make sure the right parameters are set for WandB. Note that in order to make use of WandB, you need an account and have placed your API key in the environment variables (WANDB_API_KEY).
 
 ## Train models
+To train the SVM model run the code below.
+```bash
+bash train_model_SVM.sh
+```
 
+To train the BERT model run the code below.
+```bash
+bash train_model_BERT.sh
+```
 
 ## Run Experiments
 
