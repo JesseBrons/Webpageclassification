@@ -17,6 +17,7 @@ from transformers import DataCollatorWithPadding, DefaultDataCollator, AutoModel
 
 MODEL_NAME = str(sys.argv[1])
 MODEL_VER = str(sys.argv[2])
+MIXED_PRECISION = str(sys.argv[3])
 
 set_seed(42)
 
@@ -65,10 +66,10 @@ def main():
         "max_length": 128,
         "data_types": ["title", "body"],
         "model_name": models[MODEL_NAME],
-        "mixed_precision": "fp32",
+        "mixed_precision": MIXED_PRECISION,
     }
 
-    data_folder = str(sys.argv[3])
+    data_folder = str(sys.argv[4])
 
     api = wandb.Api()
     model_artifact = api.artifact("DMOZ-classification/model_" + MODEL_NAME.upper() + "_DMOZ:" + MODEL_VER)
