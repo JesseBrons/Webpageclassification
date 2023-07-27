@@ -18,6 +18,7 @@ from transformers import AutoTokenizer, DefaultDataCollator, AutoModelForSequenc
 set_seed(42)
 
 MODEL_NAME = str(sys.argv[1])
+MIXED_PRECISION = str(sys.argv[2])
 
 def prepare_dataset(data_folder, label2id, data_types):
     def combine_data(example):
@@ -53,7 +54,7 @@ def main():
         "max_length": 256,
         "weight_decay": 0.01,
         "num_warmup_steps": 0.2,
-        "mixed_precision": "no",
+        "mixed_precision": MIXED_PRECISION,
         "split_batches": True,
     }
     
@@ -73,7 +74,7 @@ def main():
         },
     )
 
-    data_folder = str(sys.argv[2])
+    data_folder = str(sys.argv[3])
 
     id2label = {0: "Arts", 1: "Business", 2: "Computers", 3: "Health", 4: "Home", 5: "News", 6: "Recreation", 7: "Reference", 8: "Science", 9: "Shopping", 10: "Society", 11: "Sports", 12: "Games"}
     label2id = {v: k for k, v in id2label.items()}
