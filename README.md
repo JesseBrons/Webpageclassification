@@ -47,6 +47,16 @@ bash train_model_BERT.sh [GPUS] [MIXED PRECISION] [MODEL]
 ```
 
 ## Run Experiments
-For these experiments you can use the latest model available on WandB or specify a model version.
+For these experiments you can use the latest model available on WandB or specify a model version. For each model you can specify the model parameters and add the optimization techniques in the "hps" variable inside the Python script.
 
-##
+To run inference on the SVM model run the code below. MODEL VERSION can either be "latest" or a specific version "v$" where dollar represents the version number.
+```bash
+bash inference_model_SVM.sh [MODEL VERSION]
+```
+
+To run inference on the BERT model run the code below. GPUS is equal to the number of GPUs you want to use. MIXED PRECISION can either be "no" for FP32 or "fp16" for FP16. MODEL can either be "bert", "distilbert" or "tinybert". MODEL VERSION can either be "latest" or a specific version "v$" where dollar represents the version number.
+```bash
+bash inference_model_BERT.sh [GPUS] [MIXED PRECISION] [MODEL] [MODEL VERSION]
+```
+
+
