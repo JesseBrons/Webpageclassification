@@ -32,6 +32,13 @@ For our last step we need to create a Hugging Face dataset structure. Changes to
 bash create_dataset.sh
 ```
 
+## Weights and Biases
+For our experiments we made use of Weights and Biases (WandB) to save and load models and to keep track of experiments. Check the Python scripts to make sure the right parameters are set for WandB. Note that in order to make use of WandB, you need an account and have placed your API key in the environment variables (WANDB_API_KEY).
+
+## Train models
+
+
 ## Run Experiments
+
 
 ##
