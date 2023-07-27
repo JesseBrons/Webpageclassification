@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ```
 
 ## Generate Dataset
-Available categories for the dataset: Arts, Business, Computers, Games, Health, Home, News, Recreation, Reference, Science, Shopping, Society, Sports.
+Available categories for the dataset: _Arts, Business, Computers, Games, Health, Home, News, Recreation, Reference, Science, Shopping, Society and Sports_.
 
 First download the **content.rdf.u8** file from Curlie/DMOZ and place this file in the **dataset** folder. Run the crawl_websites script for each category you wish to retrieve.
 ```bash
