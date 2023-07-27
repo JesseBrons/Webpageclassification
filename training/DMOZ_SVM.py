@@ -15,6 +15,8 @@ from sklearn.svm import LinearSVC
 from sklearn.pipeline import make_pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+np.random.seed(42)
+
 class LemmaTokenizer:
         ignore_tokens = [',', '.', ';', ':', '"', '``', "''", '`']
         def __init__(self):
