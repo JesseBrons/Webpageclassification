@@ -17,4 +17,4 @@ fi
 
 MAIN_DIR=.
 
-accelerate launch --num_processes=$NUMBER_GPU --num_machines=1 --mixed_precision="no" --dynamo_backend="no" ./training/DMOZ_BERT.py $MODEL_NAME "$MAIN_DIR"
+accelerate launch --num_processes=$NUMBER_GPU --num_machines=1 --mixed_precision="$MIXED_PREC" --dynamo_backend="no" ./training/DMOZ_BERT.py $MODEL_NAME $MIXED_PREC "$MAIN_DIR"
