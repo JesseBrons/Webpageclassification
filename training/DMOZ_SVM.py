@@ -50,11 +50,13 @@ def main():
         "max_length": 512,
     }
 
+    wandb_id = wandb.util.generate_id()
+
     run = wandb.init(
         project="DMOZ-classification", 
         config=hps,
         job_type="training",
-        name="SVM_DMOZ",
+        name="SVM_DMOZ_" + str(wandb_id),
         tags=["SVM", "DMOZ"],
     )
 
