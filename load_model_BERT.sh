@@ -18,4 +18,4 @@ fi
 
 MAIN_DIR=.
 
-accelerate launch --num_processes=$NUMBER_GPU --num_machines=1 --mixed_precision="$MIXED_PRECISION" --dynamo_backend="no" "$project_dir"/inference/load_model_bert_dmoz.py $MODEL_NAME $MODEL_VER $MIXED_PRECISION $MAIN_DIR
+accelerate launch --num_processes=$NUMBER_GPU --num_machines=1 --mixed_precision="$MIXED_PRECISION" --dynamo_backend="no" ./inference/load_model_bert_dmoz.py $MODEL_NAME $MODEL_VER $MIXED_PRECISION $MAIN_DIR
