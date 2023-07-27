@@ -47,6 +47,6 @@ bash train_model_BERT.sh [GPUS] [MIXED PRECISION] [MODEL]
 ```
 
 ## Run Experiments
-
+For these experiments you can use the latest model available on WandB or specify a model version.
 
 ##
