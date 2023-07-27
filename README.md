@@ -41,9 +41,9 @@ To train the SVM model run the code below.
 bash train_model_SVM.sh
 ```
 
-To train the BERT model run the code below.
+To train the BERT model run the code below. GPUS is equal to the number of GPUs you want to use. MIXED PRECISION can either be "no" for FP32 or "fp16" for FP16. MODEL can either be "bert", "distilbert" or "tinybert".
 ```bash
-bash train_model_BERT.sh
+bash train_model_BERT.sh [GPUS] [MIXED PRECISION] [MODEL]
 ```
 
 ## Run Experiments
