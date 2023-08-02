@@ -5,7 +5,7 @@ This reposity provides the tools necessary to create our version of the DMOZ dat
 ## Setup Environment
 
 ```bash
-conda create -n web_classification python=?
+conda create -n web_classification python=3.10.6
 conda activate web_classification
 ```
 
