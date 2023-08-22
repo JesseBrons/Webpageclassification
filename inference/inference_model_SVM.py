@@ -72,7 +72,7 @@ def main():
     predictions = loaded_model.predict(X_test)
     inference_time = process_time() - t0
 
-    wandb.summary["inference_time"] = inference_time
+    wandb.summary["inference_time"] = inference_time * 1000 
     wandb.summary["accuracy"] = accuracy_score(y_test, predictions)
     wandb.summary["f1_weighted"] = f1_score(y_test, predictions, average="weighted")
     wandb.summary["precision"] = precision_score(y_test, predictions, average="weighted")
